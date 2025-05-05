@@ -1,53 +1,35 @@
 import csv
-from collections import defaultdict
-import matplotlib.pyplot as plt
 import pandas as pd
+import matplotlib.pyplot as plt
 
 arquivos = ['loja_1.csv', 'loja_2.csv', 'loja_3.csv', 'loja_4.csv']
 nomes_lojas = ['loja1', 'loja2', 'loja3', 'loja4']
 
-# Dicionário: {categoria: {loja1: valor, loja2: valor, ...}}
-categorias = defaultdict(lambda: defaultdict(float))
+# Carrega os DataFrames das lojas usando list comprehension
+dfs = [pd.read_csv(arquivo) for arquivo in arquivos]
 
-for nome_loja, arquivo in zip(nomes_lojas, arquivos):
-    with open(arquivo, encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            categoria = row['Categoria do Produto']
-            try:
-                preco = float(row['Preço'].replace(',', '.'))
-                categorias[categoria][nome_loja] += preco
-            except Exception:
-                pass  # Ignora linhas com erro de conversão
+# Calcula o agrupamento e soma por categoria para cada loja usando list comprehension
+cats = [df.groupby('Categoria do Produto')['Preço'].sum() for df in dfs]
 
-# Ordena as categorias pelo faturamento total (todas as lojas), ordem decrescente
-categorias_ordenadas = sorted(
-    categorias.items(),
-    key=lambda item: sum(item[1].get(loja, 0) for loja in nomes_lojas),
-    reverse=True
-)
+# Concatena os resultados em um único DataFrame, alinhando pelo índice (categoria)
+df_categorias = pd.concat(cats, axis=1)
+df_categorias.columns = nomes_lojas
+df_categorias = df_categorias.fillna(0)
 
-# Cabeçalho
-header = f"{'Categoria':<25} | " + " | ".join([f"{loja:^15}" for loja in nomes_lojas])
-print(header)
-print("-" * len(header))
+# Ordena pelo total de vendas (opcional)
+df_categorias = df_categorias.loc[df_categorias.sum(axis=1).sort_values(ascending=False).index]
 
-# Linhas da tabela
-for categoria, valores in categorias_ordenadas:
-    linha = f"{categoria:<25} | " + " | ".join(
-        f"R$ {valores.get(loja, 0):,.2f}".replace(',', 'X').replace('.', ',').replace('X', '.').rjust(15)
-        for loja in nomes_lojas
-    )
-    print(linha)
-
-# --- Gráfico de pizza para cada loja ---
-# Converte o dicionário de categorias para DataFrame
-df_categorias = pd.DataFrame(categorias).T.fillna(0)
-df_categorias = df_categorias[nomes_lojas]  # Garante a ordem das colunas
+# Impressão formatada
+print(f"{'Categoria':<25} | " + " | ".join([f"{loja:^15}" for loja in nomes_lojas]))
+print("-" * (25 + 3 + 16 * len(nomes_lojas)))
+for categoria, row in zip(df_categorias.index, df_categorias.values):
+    print(f"{categoria:<25} | " + " | ".join(
+        f"R$ {valor:,.2f}".replace(',', 'X').replace('.', ',').replace('X', '.').rjust(15)
+        for valor in row
+    ))
 
 # Gráfico de pizza para cada loja
 fig, axs = plt.subplots(2, 2, figsize=(14, 10))
-
 for ax, loja in zip(axs.flatten(), nomes_lojas):
     valores = df_categorias[loja]
     categorias_labels = df_categorias.index
