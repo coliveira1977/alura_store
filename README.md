@@ -1,3 +1,27 @@
+# Relatório Final
+
+## Relatório Comparativo com os Principais Indicadores
+
+| Loja   | Total de Vendas | Faturamento Total (R$) | Média de Preço (R$) | Média do Frete (R$) | Nota Média de Avaliação |
+|--------|-----------------|------------------------|----------------------|---------------------|-------------------------|
+| Loja 1 | 2359            | 1.534.509,12          | 650,49              | 34,69               | 3,98                   |
+| Loja 2 | 2359            | 1.488.459,06          | 630,97              | 33,62               | 4,04                   |
+| Loja 3 | 2359            | 1.464.025,03          | 620,61              | 33,07               | 4,05                   |
+| Loja 4 | 2358            | 1.384.497,58          | 587,15              | 31,28               | 4,00                   |
+
+## Conclusão: Loja que Deve Ser Fechada
+
+A **Loja 4** apresenta os piores resultados financeiros:
+
+- Menor faturamento total.
+- Menor preço médio.
+- Menor volume de vendas (mesmo que por apenas 1 venda).
+- Avaliação média inferior à da Loja 3 e Loja 2.
+
+Apesar de ter o frete mais barato e uma nota razoável, o desempenho comercial da Loja 4 é o mais fraco.
+
+
+
 # Alura Store - Análise de Vendas
 
 Este projeto realiza a análise de vendas de quatro lojas fictícias, utilizando dados em arquivos CSV. O objetivo é comparar o desempenho das lojas, analisar o faturamento por categoria de produto e apresentar visualizações gráficas para facilitar a tomada de decisão.
