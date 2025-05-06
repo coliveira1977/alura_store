@@ -20,6 +20,20 @@ A **Loja 4** apresenta os piores resultados financeiros:
 
 Apesar de ter o frete mais barato e uma nota razoável, o desempenho comercial da Loja 4 é o mais fraco.
 
+## Mapa de Calor
+
+O **Mapa de Calor** apresenta a concentração de vendas com base nas coordenadas geográficas (latitude e longitude) dos dados de vendas. Ele ajuda a identificar as regiões com maior volume de vendas.
+
+### Visualização do Mapa de Calor
+Abaixo está uma prévia do mapa de calor gerado:
+
+![Mapa de Calor](csv_backup/mapa_calor.png)
+
+### Análise
+- As áreas mais escuras no mapa representam regiões com maior concentração de vendas.
+- Este mapa pode ser usado para identificar mercados-alvo e planejar estratégias de marketing ou logística.
+
+Para visualizar o mapa interativo completo, abra o arquivo `mapa_calor.html` no navegador.
 
 
 # Alura Store - Análise de Vendas
