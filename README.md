@@ -51,7 +51,6 @@ Este projeto realiza a análise de vendas de quatro lojas fictícias, utilizando
 
 ## Principais Funcionalidades
 
-- **Cálculo do faturamento total por loja** com listas por compreensão e visualização em gráfico de barras.
 
 ## Faturamento Total por Loja
 
@@ -64,7 +63,7 @@ O gráfico abaixo apresenta o **faturamento total** de cada loja, permitindo uma
 - É possível identificar qual loja teve o maior e o menor faturamento.
 - Este gráfico é útil para avaliar o desempenho financeiro de cada unidade.
 
-- **Cálculo do faturamento por categoria de produto** para cada loja, com apresentação em tabela e gráficos de pizza.
+
 
 ## Faturamento por Categoria de Produto
 
@@ -77,7 +76,7 @@ O gráfico abaixo apresenta o **faturamento por categoria de produto** para cada
 - É possível identificar quais categorias têm maior impacto no faturamento de cada loja.
 - Este gráfico é útil para entender quais produtos são mais relevantes para o desempenho financeiro.
 
-- **Cálculo da média de avaliação das compras** por loja, com visualização em gráfico de barras.
+
 
 ## Média de Avaliação das Compras por Loja
 
@@ -94,6 +93,17 @@ O gráfico abaixo apresenta a **média de avaliação das compras** realizadas e
 - **Visualização dos dados em gráficos de barras e pizza** com matplotlib.
 - **Formatação dos valores em reais (R$)**.
 - **Uso avançado de listas e pandas** para tornar o código mais eficiente, compacto e legível.
+
+## Média do Frete por Loja
+
+O gráfico abaixo apresenta a **média do valor do frete** para cada loja, permitindo uma análise dos custos de envio:
+
+![Média do Frete](csv_backup/Frete.png)
+
+### Análise
+- O gráfico de barras mostra a média do valor do frete por loja.
+- É possível identificar quais lojas possuem os custos de envio mais altos ou mais baixos.
+- Este gráfico é útil para avaliar a eficiência logística e os custos associados ao transporte.
 
 ## Como Executar
 
