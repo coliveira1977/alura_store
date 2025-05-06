@@ -52,8 +52,44 @@ Este projeto realiza a análise de vendas de quatro lojas fictícias, utilizando
 ## Principais Funcionalidades
 
 - **Cálculo do faturamento total por loja** com listas por compreensão e visualização em gráfico de barras.
+
+## Faturamento Total por Loja
+
+O gráfico abaixo apresenta o **faturamento total** de cada loja, permitindo uma comparação clara entre elas:
+
+![Faturamento Total](csv_backup/faturamento.png)
+
+### Análise
+- O gráfico de barras mostra o faturamento total de cada loja.
+- É possível identificar qual loja teve o maior e o menor faturamento.
+- Este gráfico é útil para avaliar o desempenho financeiro de cada unidade.
+
 - **Cálculo do faturamento por categoria de produto** para cada loja, com apresentação em tabela e gráficos de pizza.
+
+## Faturamento por Categoria de Produto
+
+O gráfico abaixo apresenta o **faturamento por categoria de produto** para cada loja, permitindo uma análise detalhada das categorias que mais contribuem para o faturamento:
+
+![Faturamento por Categoria](csv_backup/Faturamento_Categoria.png)
+
+### Análise
+- O gráfico de pizza mostra a participação percentual de cada categoria no faturamento total.
+- É possível identificar quais categorias têm maior impacto no faturamento de cada loja.
+- Este gráfico é útil para entender quais produtos são mais relevantes para o desempenho financeiro.
+
 - **Cálculo da média de avaliação das compras** por loja, com visualização em gráfico de barras.
+
+## Média de Avaliação das Compras por Loja
+
+O gráfico abaixo apresenta a **média de avaliação das compras** realizadas em cada loja, permitindo uma análise da satisfação dos clientes:
+
+![Média de Avaliação](csv_backup/avaliacao.png)
+
+### Análise
+- O gráfico de barras mostra a média de avaliação das compras por loja.
+- É possível identificar quais lojas possuem maior ou menor satisfação dos clientes.
+- Este gráfico é útil para avaliar a qualidade do atendimento e dos produtos oferecidos.
+
 - **Comparação entre lojas** de forma visual e tabular.
 - **Visualização dos dados em gráficos de barras e pizza** com matplotlib.
 - **Formatação dos valores em reais (R$)**.
