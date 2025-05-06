@@ -57,7 +57,7 @@ Este projeto realiza a análise de vendas de quatro lojas fictícias, utilizando
 
 O gráfico abaixo apresenta o **faturamento total** de cada loja, permitindo uma comparação clara entre elas:
 
-![Faturamento Total](csv_backup/faturamento.png)
+![Faturamento Total](csv_backup/Faturamento.png)
 
 ### Análise
 - O gráfico de barras mostra o faturamento total de cada loja.
