@@ -35,6 +35,8 @@ Abaixo está uma prévia do mapa de calor gerado:
 
 Para visualizar o mapa interativo completo, abra o arquivo `mapa_calor.html` no navegador.
 
+Para executar o mapa de calor, use o script modules\mapa_calor.py, que gera um arquivo HTML (na raiz do projeto: mapa_calor.html) com o mapa interativo.
+
 
 # Alura Store - Análise de Vendas
 
@@ -125,11 +127,17 @@ O gráfico abaixo apresenta a **média do valor do frete** para cada loja, permi
      ```
    
 
-4. **Ou abra o notebook no Jupyter:**
+4. **Ou abra o notebook no Jupyter (AluraStoreBr.ipynb):**
    ```bash
-   jupyter notebook AluraStoreBr.ipynb
+   jupyter notebook AluraStoreBr.ipynb (VSCode ou Jupyter Lab)
+   ```
 
    Ou carregue o arquivo no Google Colab.
+
+    "O tipo de arquivo ipynb funciona igualmente para o Google Colab e para os notebooks do Jupyter do ambiente anaconda. Para abrir um notebook que está salvo no seu computador através do google colab, basta ir até o site do Google Colaboratory (https://colab.research.google.com/), selecionar a aba Arquivo e escolher a opção Abrir notebook (Atalho Ctrl + O)"
+
+
+
    ```
 
 ## Exemplos de Visualizações
