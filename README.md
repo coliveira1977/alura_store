@@ -115,30 +115,21 @@ O gráfico abaixo apresenta a **média do valor do frete** para cada loja, permi
 
 2. **Instale as dependências necessárias:**
    ```bash
-   pip install pandas matplotlib
+   pip install pandas matplotlib folium notebook 
    ```
 
-3. **Execute os scripts Python conforme desejado:**
-   - Para ver o faturamento total das lojas:
+3. **Execute o script Python conforme:**
+   - Para executar a analise completa:
      ```bash
-     python faturamento.py
+     python main.py
      ```
-   - Para ver o faturamento por categoria e gráficos de pizza:
-     ```bash
-     python produtos.py
-     ```
-   - Para ver a média de avaliação das compras por loja:
-     ```bash
-     python avaliacao.py
-     ```
-   - Para testar médias, somas e gráficos diversos:
-     ```bash
-     python rascunho.py
-     ```
+   
 
 4. **Ou abra o notebook no Jupyter:**
    ```bash
    jupyter notebook AluraStoreBr.ipynb
+
+   Ou carregue o arquivo no Google Colab.
    ```
 
 ## Exemplos de Visualizações
